@@ -21,27 +21,24 @@
             var counter = 1;
 
             function addinput() {
-                var newInput = `
-                <form method='GET' action="valida.php">
-                    <div class="form-group" >
-                    <label for="Nome">Insira o nome do Aluno</label>
-                    <input type="text"  class="form-control" name="Nome" autocomplete="off" maxlength="60" placeholder="Nome do aluno">
-                </div>
-            <div class="form-group">
-                    <label for="Nota">Insira a nota do aluno:</label>
-                    <input type="number" class="form-control" name="Nota" autocomplete="off" maxlength="10" placeholder="Nota do aluno">
-            </div>
-                <input type="submit" value="enviar" class="primary">
 
-                </form>
-            </div>`;
+                if(counter < 10){
+                    var newInput = `
+                                <form method='GET' action="valida.php">
+                                    <div class="form-group" >
+                                    <label for="Nome">Insira o nome do Aluno</label>
+                                    <input type="text"  class="form-control" name="Nome" autocomplete="off" maxlength="60" placeholder="Nome do aluno">
+                                </div>
+                            <div class="form-group">
+                                    <label for="Nota">Insira a nota do aluno:</label>
+                                    <input type="number" class="form-control" name="Nota" autocomplete="off" maxlength="10" placeholder="Nota do aluno">
+                            </div>
+                                <input type="submit" value="enviar" class="primary">
 
-            function removeInput(button){
-                $(button).parent().remove();
-            };
-
-            }
-        })
+                                </form>
+                            </div>`;
+                    $('#input-container').append(newInput);
+                    counter++; }}});
     </script>
     <main>
 
@@ -58,7 +55,7 @@
                     <label for="Nota">Insira a nota do aluno:</label>
                     <input type="number" class="form-control" name="Nota" autocomplete="off" maxlength="10" placeholder="Nota do aluno">
                 </div>
-                <button type="submit" class="primary">Enviar</button>
+                <button type="submit" class="primary" id="add-btn">Enviar</button>
 
             </form>
         </div>

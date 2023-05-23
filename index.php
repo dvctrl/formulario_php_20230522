@@ -14,8 +14,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>Cadastro de usuário</title>
 </head>
-
+<style>
+    .container {
+        height:100vh; 
+    }
+</style>
 <body>
+    <!--
     <script>
         $(document).ready(function() {
             var counter = 1;
@@ -40,24 +45,46 @@
                     $('#input-container').append(newInput);
                     counter++; }}});
     </script>
+      -->
+
+
     <main>
-
-        <div class="container">
-            <h2>Preenchimento formulário de Aluno</h2>
-            <p>para este formulário, será necessário informar ao menos 10 alunos!</p>
-
-            <form method='GET' action="valida.php">
-                <div class="form-group">
-                    <label for="Nome">Insira o nome do Aluno</label>
-                    <input type="text" class="form-control" name="Nome" autocomplete="off" maxlength="60" placeholder="Nome do aluno">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h4>Formulário de preenchimento de notas dos alunos - 2023</h4>
+                    </div>
+                </div>    
+                    <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                            <label for="Nome">Nome Aluno</label>
+                            <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
+                            </div>
+                            <div class="col">
+                            <label for="Nota">Nota Aluno</label>
+                            <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-success">Enviar Dados</button>
+                                <button type="reset" class="btn btn-warning">Apagar Dados</button>
+                                </div>
+                        </div>
+                        
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="Nota">Insira a nota do aluno:</label>
-                    <input type="number" class="form-control" name="Nota" autocomplete="off" maxlength="10" placeholder="Nota do aluno">
-                </div>
-                <button type="submit" class="primary" id="add-btn">Enviar</button>
 
-            </form>
+            </div>
+        <form>
+
+        </form>
+        
         </div>
     </main>
 </body>

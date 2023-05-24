@@ -25,10 +25,16 @@
 
                     var newForm = 
                                 `
-                                <label for="Nome">Nome Aluno</label>
-                                <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
-                                <label for="Nota">Nota Aluno</label>
-                                <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="Nome">Nome Aluno</label>
+                                    <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
+                                        </div>
+                                    <div class="col">
+                                    <label for="Nota">Nota Aluno</label>
+                                    <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                                </div>
+                            </div>
                                 `;
 
                             $("form").append(newForm);

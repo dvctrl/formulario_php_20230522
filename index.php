@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,33 +19,24 @@
     }
 </style>
 <body>
-    <!--
-    <script>
-        $(document).ready(function() {
-            var counter = 1;
 
+    <script>
             function addinput() {
 
-                if(counter < 10){
-                    var newInput = `
-                                <form method='GET' action="valida.php">
-                                    <div class="form-group" >
-                                    <label for="Nome">Insira o nome do Aluno</label>
-                                    <input type="text"  class="form-control" name="Nome" autocomplete="off" maxlength="60" placeholder="Nome do aluno">
-                                </div>
-                            <div class="form-group">
-                                    <label for="Nota">Insira a nota do aluno:</label>
-                                    <input type="number" class="form-control" name="Nota" autocomplete="off" maxlength="10" placeholder="Nota do aluno">
-                            </div>
-                                <input type="submit" value="enviar" class="primary">
+                    var newForm = 
+                                `
+                                <label for="Nome">Nome Aluno</label>
+                                <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
+                                <label for="Nota">Nota Aluno</label>
+                                <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                                `;
 
-                                </form>
-                            </div>`;
-                    $('#input-container').append(newInput);
-                    counter++; }}});
+                            $("form").append(newForm);
+
+        
+                    }
+                    ;
     </script>
-      -->
-
 
     <main>
         <div class="container d-flex justify-content-center align-items-center">
@@ -57,7 +47,7 @@
                     </div>
                 </div>    
                     <div class="card-body">
-                    <form>
+                    <form id="form">
                         <div class="row">
                             <div class="col">
                             <label for="Nome">Nome Aluno</label>
@@ -68,23 +58,18 @@
                             <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
                             </div>
                         </div>
+                        </form>
                         <br>
                         <div class="row">
                             <div class="col">
                                 <button type="submit" class="btn btn-success">Enviar Dados</button>
+                                <button type="button" class="btn btn-success" onClick="addinput()">Adicionar aluno</button>
                                 <button type="reset" class="btn btn-warning">Apagar Dados</button>
                                 </div>
-                        </div>
-                        
-                        </form>
+                        </div>          
                     </div>
                 </div>
-
             </div>
-        <form>
-
-        </form>
-        
         </div>
     </main>
 </body>

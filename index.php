@@ -26,15 +26,14 @@
                     var newForm = 
                                 `
                             <div class="row">
-                                <div class="col">
-                                    <label for="Nome">Nome Aluno</label>
-                                    <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
-                                        </div>
                                     <div class="col">
-                                    <label for="Nota">Nota Aluno</label>
-                                    <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                                    <input type="text" class="form-control"name="nome[]" placeholder="Nome Aluno" autocomplete="off">
+                                    </div>
+                                    <div class="col">
+                                    <input type="number" class="form-control" name="nota[]" placeholder="Nota do Aluno" autocomplete="off">
                                 </div>
                             </div>
+                            <br>
                                 `;
 
                             $("form").append(newForm);
@@ -49,29 +48,31 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">
-                        <h4>Formulário de preenchimento de notas dos alunos - 2023</h4>
+                        <h4>Formulário de preenchimento de notas dos alunos</h4>
                     </div>
                 </div>    
                     <div class="card-body">
-                    <form id="form">
+                    <form id="form" action="valida.php">
                         <div class="row">
                             <div class="col">
-                            <label for="Nome">Nome Aluno</label>
-                            <input type="text" class="form-control"name="nome" placeholder="Nome Aluno">
+                            <input type="text" class="form-control"name="nome[]" placeholder="Nome Aluno" autocomplete="off">
                             </div>
                             <div class="col">
-                            <label for="Nota">Nota Aluno</label>
-                            <input type="number" class="form-control" name="nota" placeholder="Nota do Aluno">
+                            <input type="number" class="form-control" name="nota[]" placeholder="Nota do Aluno" autocomplete="off">
                             </div>
                         </div>
-                        </form>
                         <br>
+                    </div>
+                        <br>
+                    <div class="card-footer">    
                         <div class="row">
                             <div class="col">
                                 <button type="submit" class="btn btn-success">Enviar Dados</button>
-                                <button type="button" class="btn btn-success" onClick="addinput()">Adicionar aluno</button>
+                                <button type="button" class="btn btn-primary" onClick="addinput()">Adicionar aluno</button>
                                 <button type="reset" class="btn btn-warning">Apagar Dados</button>
-                                </div>
+                            </div>
+                    </div>    
+                    </form>   
                         </div>          
                     </div>
                 </div>

@@ -4,14 +4,14 @@
     $nome_aluno = ""; 
     $nota_aluno = 0;
 
-    if(isset($_GET["Nome"]) && isset($_GET["Nota"])){
+    if(isset($_GET["nome"]) && isset($_GET["nota"])){
 
-        $nome_aluno = $_GET["Nome"]; 
-        $nota_aluno = $_GET["Nota"];
+        $nome_aluno = $_GET["nome"]; 
+        $nota_aluno = $_GET["nota"];
 
       
-        $dadosFormulario["Nome"] = $nome_aluno;
-        $dadosFormulario["Nota"] = $nota_aluno;
+        $dadosFormulario["nome"] = $nome_aluno;
+        $dadosFormulario["nota"] = $nota_aluno;
 
       
 
